@@ -1,0 +1,25 @@
+@import "./picker-column-option";
+@import "../picker/picker.ios.vars";
+
+// iOS Picker Column
+// --------------------------------------------------
+
+.picker-opt button {
+  @include padding($picker-ios-option-padding-top, $picker-ios-option-padding-end, $picker-ios-option-padding-bottom, $picker-ios-option-padding-start);
+  @include margin(0);
+  @include transform-origin(center, center);
+
+  height: 46px;
+
+  transform-style: preserve-3d;
+
+  transition-timing-function: ease-out;
+
+  background: transparent;
+  color: inherit;
+
+  font-size: $picker-ios-option-font-size;
+
+  line-height: $picker-ios-option-height;
+  backface-visibility: hidden;
+}

@@ -1,0 +1,29 @@
+@import "../../themes/ionic.globals";
+
+.picker-opt button {
+  display: block;
+
+  width: 100%;
+
+  border: 0;
+
+  text-align: center;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  contain: strict;
+  overflow: hidden;
+  will-change: transform;
+  
+  scroll-snap-align: center;
+  
+  pointer-events: none;
+}
+
+.picker-opt {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

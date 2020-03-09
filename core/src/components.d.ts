@@ -1603,6 +1603,18 @@ export namespace Components {
     */
     'col': PickerColumn;
   }
+  interface IonPickerColumnNew {
+    /**
+    * Picker column data
+    */
+    'col': PickerColumn;
+    'value'?: any;
+  }
+  interface IonPickerColumnOption {
+    'disabled'?: boolean;
+    'text'?: string;
+    'value'?: any;
+  }
   interface IonPopover {
     /**
     * If `true`, the popover will animate.
@@ -2961,6 +2973,18 @@ declare global {
     new (): HTMLIonPickerColumnElement;
   };
 
+  interface HTMLIonPickerColumnNewElement extends Components.IonPickerColumnNew, HTMLStencilElement {}
+  var HTMLIonPickerColumnNewElement: {
+    prototype: HTMLIonPickerColumnNewElement;
+    new (): HTMLIonPickerColumnNewElement;
+  };
+
+  interface HTMLIonPickerColumnOptionElement extends Components.IonPickerColumnOption, HTMLStencilElement {}
+  var HTMLIonPickerColumnOptionElement: {
+    prototype: HTMLIonPickerColumnOptionElement;
+    new (): HTMLIonPickerColumnOptionElement;
+  };
+
   interface HTMLIonPopoverElement extends Components.IonPopover, HTMLStencilElement {}
   var HTMLIonPopoverElement: {
     prototype: HTMLIonPopoverElement;
@@ -3243,6 +3267,8 @@ declare global {
     'ion-note': HTMLIonNoteElement;
     'ion-picker': HTMLIonPickerElement;
     'ion-picker-column': HTMLIonPickerColumnElement;
+    'ion-picker-column-new': HTMLIonPickerColumnNewElement;
+    'ion-picker-column-option': HTMLIonPickerColumnOptionElement;
     'ion-popover': HTMLIonPopoverElement;
     'ion-progress-bar': HTMLIonProgressBarElement;
     'ion-radio': HTMLIonRadioElement;
@@ -4735,6 +4761,19 @@ declare namespace LocalJSX {
     */
     'col': PickerColumn;
   }
+  interface IonPickerColumnNew {
+    /**
+    * Picker column data
+    */
+    'col': PickerColumn;
+    'onIonChange'?: (event: CustomEvent<any>) => void;
+    'value'?: any;
+  }
+  interface IonPickerColumnOption {
+    'disabled'?: boolean;
+    'text'?: string;
+    'value'?: any;
+  }
   interface IonPopover {
     /**
     * If `true`, the popover will animate.
@@ -5875,6 +5914,8 @@ declare namespace LocalJSX {
     'ion-note': IonNote;
     'ion-picker': IonPicker;
     'ion-picker-column': IonPickerColumn;
+    'ion-picker-column-new': IonPickerColumnNew;
+    'ion-picker-column-option': IonPickerColumnOption;
     'ion-popover': IonPopover;
     'ion-progress-bar': IonProgressBar;
     'ion-radio': IonRadio;
@@ -5971,6 +6012,8 @@ declare module "@stencil/core" {
       'ion-note': LocalJSX.IonNote & JSXBase.HTMLAttributes<HTMLIonNoteElement>;
       'ion-picker': LocalJSX.IonPicker & JSXBase.HTMLAttributes<HTMLIonPickerElement>;
       'ion-picker-column': LocalJSX.IonPickerColumn & JSXBase.HTMLAttributes<HTMLIonPickerColumnElement>;
+      'ion-picker-column-new': LocalJSX.IonPickerColumnNew & JSXBase.HTMLAttributes<HTMLIonPickerColumnNewElement>;
+      'ion-picker-column-option': LocalJSX.IonPickerColumnOption & JSXBase.HTMLAttributes<HTMLIonPickerColumnOptionElement>;
       'ion-popover': LocalJSX.IonPopover & JSXBase.HTMLAttributes<HTMLIonPopoverElement>;
       'ion-progress-bar': LocalJSX.IonProgressBar & JSXBase.HTMLAttributes<HTMLIonProgressBarElement>;
       'ion-radio': LocalJSX.IonRadio & JSXBase.HTMLAttributes<HTMLIonRadioElement>;

@@ -1,0 +1,41 @@
+@import "./picker-column";
+@import "../picker/picker.ios.vars";
+
+// iOS Picker Column
+// --------------------------------------------------
+
+.picker-col {
+  @include padding($picker-ios-column-padding-top, $picker-ios-column-padding-end, $picker-ios-column-padding-bottom, $picker-ios-column-padding-start);
+
+  transform-style: preserve-3d;
+  
+  position: relative;
+}
+
+.picker-prefix,
+.picker-suffix,
+.picker-opts {
+  color: inherit;
+
+  font-size: $picker-ios-option-font-size;
+
+  line-height: $picker-ios-option-height;
+}
+
+.picker-above-highlight {
+  border-bottom: 1px solid $picker-ios-border-color;
+
+  background: linear-gradient(
+    to bottom,
+    $picker-ios-top-background-color 20%,
+    $picker-ios-bottom-background-color 100%);
+}
+
+.picker-below-highlight {
+  border-top: 1px solid $picker-ios-border-color;
+
+  background: linear-gradient(
+    to top,
+    $picker-ios-top-background-color 30%,
+    $picker-ios-bottom-background-color 100%);
+}

@@ -1,0 +1,78 @@
+@import "../../themes/ionic.globals";
+
+// Picker Column
+// --------------------------------------------------
+.picker-col {
+  display: flex;
+  position: relative;
+
+  flex: 1;
+  justify-content: center;
+
+  height: 100%;
+  box-sizing: content-box;
+
+  contain: content;
+}
+
+.picker-opts {
+  position: relative;
+
+  flex: 1;
+
+  max-width: 100%;
+  
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+}
+
+.picker-opts-left {
+  justify-content: flex-start;
+}
+
+.picker-opts-right {
+  justify-content: flex-end;
+}
+
+.picker-prefix {
+  position: relative;
+
+  flex: 1;
+
+  text-align: end;
+
+  white-space: nowrap;
+}
+
+.picker-suffix {
+  position: relative;
+
+  flex: 1;
+
+  text-align: start;
+
+  white-space: nowrap;
+}
+
+
+.picker-above-highlight,
+.picker-below-highlight {
+  position: absolute;
+  
+  width: 100%;
+  height: calc(50% - 23px);
+  
+  pointer-events: none;
+  
+  z-index: 10;
+  
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.picker-above-highlight {
+  @include position(0px, null, null, null);
+}
+
+.picker-below-highlight {
+  @include position(null, null, 0px, null);
+}

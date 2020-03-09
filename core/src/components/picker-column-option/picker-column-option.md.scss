@@ -1,0 +1,30 @@
+@import "./picker-column-option";
+@import "../picker/picker.md.vars";
+
+// Material Design Picker Column
+// --------------------------------------------------
+
+.picker-opt button {
+  @include margin(0);
+  @include padding($picker-md-option-padding-top, $picker-md-option-padding-end, $picker-md-option-padding-bottom, $picker-md-option-padding-start);
+
+  height: 43px;
+
+  transition-timing-function: ease-out;
+
+  background: transparent;
+  color: inherit;
+
+  font-size: $picker-md-option-font-size;
+
+  line-height: $picker-md-option-height;
+  backface-visibility: hidden;
+  
+  transform: scale(0.81);
+}
+
+.picker-opt.picker-opt-selected button {
+  color: $picker-md-option-selected-color;
+  
+  transform: scale(1);
+}
